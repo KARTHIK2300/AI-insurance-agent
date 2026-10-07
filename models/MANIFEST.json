@@ -1,0 +1,40 @@
+{
+  "model_version": "v1.0.0",
+  "created_utc": "2026-10-07T07:55:04+00:00",
+  "git_sha": "090fb5bb786d70245c5669e7806ac5fa47e12c2a",
+  "artifact": "coverwise_model.joblib",
+  "artifact_sha256": "6715846667c76f4d81e719a5371815c5277d79cc658cfb99bb0bf149c3cf206b",
+  "features": [
+    "sum_insured",
+    "annual_premium",
+    "premium_to_coverage_ratio",
+    "waiting_period_months",
+    "pre_existing_disease_waiting_period_months",
+    "copayment_percentage",
+    "room_rent_limit_present",
+    "icu_limit_present",
+    "disease_sub_limit_count",
+    "exclusion_count",
+    "restoration_benefit_present",
+    "no_claim_bonus_present",
+    "child_coverage_present",
+    "maternity_coverage_present",
+    "claim_process_clarity_score",
+    "ambiguous_clause_count",
+    "policy_type"
+  ],
+  "training_data_sha256": "2a93f15deec97bcdff80056086f8f31382a6de7111a2dbf1c6bdf4f908f50386",
+  "n_rows": 480,
+  "n_real_rows": 0,
+  "sklearn_version": "1.8.0",
+  "python_version": "3.12.3",
+  "production_method": "Gradient Boosting regressor -> score bands",
+  "metrics": {
+    "macro_f1": 0.7980706734386886,
+    "accuracy": 0.8125,
+    "score_mae": 4.27288428747853,
+    "score_r2": 0.922473259215691,
+    "high_risk_recall": 0.633
+  },
+  "gates_passed": true
+}
