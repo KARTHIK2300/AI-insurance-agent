@@ -1,0 +1,60 @@
+name: Deploy (optional, manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Where to deploy
+        type: choice
+        options: [huggingface, ec2]
+        required: true
+      image_tag:
+        description: Image tag for EC2 (e.g. 1.0.0)
+        default: latest
+
+permissions:
+  contents: read
+
+jobs:
+  huggingface:
+    if: inputs.target == 'huggingface'
+    runs-on: ubuntu-latest
+    environment: production        # add required reviewers in repo settings for an approval gate
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-deploy.txt
+      - run: python scripts/deploy_hf_space.py --repo-id "${{ vars.HF_SPACE_ID }}"
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+
+  ec2:
+    if: inputs.target == 'ec2'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Deploy over SSH (secrets stay in AWS Secrets Manager / the instance role)
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          envs: IMAGE,SECRET_ID,AWS_REGION,GHCR_USER,GHCR_TOKEN
+          script: |
+            curl -fsSL https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/deploy/ec2_setup.sh | bash
+        env:
+          IMAGE: ghcr.io/${{ github.repository }}:${{ inputs.image_tag }}
+          SECRET_ID: ${{ vars.COVERWISE_AWS_SECRET_ID }}
+          AWS_REGION: ${{ vars.AWS_REGION }}
+          GHCR_USER: ${{ github.actor }}
+          GHCR_TOKEN: ${{ secrets.GHCR_PULL_TOKEN }}
+      - name: Post-deploy smoke test
+        run: |
+          pip install -r requirements.txt
+          python scripts/smoke_test.py --url "http://${{ secrets.EC2_HOST }}:8501" --wait 120

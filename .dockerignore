@@ -1,0 +1,11 @@
+.git
+.github
+.env
+__pycache__
+.pytest_cache
+.ruff_cache
+tests
+data/real_policies
+data/raw/acko*.csv
+reports/*.png
+*.log

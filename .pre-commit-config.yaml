@@ -1,0 +1,18 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+  - repo: local
+    hooks:
+      - id: repo-hygiene
+        name: secrets / PII / forbidden files
+        entry: python scripts/check_repo_hygiene.py
+        language: system
+        pass_filenames: false
+      - id: validate-data
+        name: validate training data
+        entry: python scripts/validate_data.py
+        language: system
+        pass_filenames: false
+        files: ^data/(raw|labelled)/

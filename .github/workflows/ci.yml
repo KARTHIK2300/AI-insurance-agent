@@ -1,0 +1,73 @@
+name: CI (code + ML model)
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  code-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements*.txt
+      - name: System packages (OCR)
+        run: sudo apt-get update && sudo apt-get install -y tesseract-ocr poppler-utils
+      - run: pip install -r requirements-dev.txt
+      - name: Lint (PEP 8 via ruff)
+        run: ruff check .
+      - name: Repo hygiene (secrets, PII in samples, forbidden files)
+        run: python scripts/check_repo_hygiene.py
+      - name: Tests
+        run: pytest --junitxml=reports/junit.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: reports/junit.xml
+
+  ml-pipeline:
+    needs: code-quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements*.txt
+      - run: sudo apt-get update && sudo apt-get install -y tesseract-ocr poppler-utils
+      - run: pip install -r requirements-dev.txt
+      - name: 1. Validate training data
+        run: python scripts/validate_data.py
+      - name: 2. Train + cross-validate model
+        run: python scripts/train_model.py
+      - name: 3. Evaluate extraction, Q&A grounding and safety
+        run: python scripts/evaluate.py
+      - name: 4. Quality gates (blocks the merge on regression)
+        run: python scripts/ci_quality_gate.py
+      - name: 5. Package model (manifest + model card)
+        run: python scripts/package_model.py --require-gates
+      - name: 6. Smoke test
+        run: python scripts/smoke_test.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: model-bundle-${{ github.sha }}
+          path: |
+            models/
+            reports/evaluation_results.json
+            reports/quality_gate_result.json
+            reports/data_validation.json
+            reports/figures/

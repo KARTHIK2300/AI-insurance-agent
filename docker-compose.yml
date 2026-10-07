@@ -1,0 +1,11 @@
+services:
+  coverwise:
+    build: .
+    image: coverwise-ai:local
+    ports: ["8501:8501"]
+    env_file: [.env]            # copy .env.example to .env; never commit it
+    environment:
+      COVERWISE_HUMAN_REVIEW: "${COVERWISE_HUMAN_REVIEW:-0}"
+    volumes:
+      - ./data/labelled:/app/data/labelled   # keeps human-review logs outside the container
+    restart: unless-stopped
