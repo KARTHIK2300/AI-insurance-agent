@@ -1,0 +1,7 @@
+{
+  "rows_total": 1200000,
+  "rows_without_target": 415032,
+  "rows_used": 300000,
+  "rmsle_holdout": 0.9337,
+  "rmsle_mean_baseline": 1.0887
+}
