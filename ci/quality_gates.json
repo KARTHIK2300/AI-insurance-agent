@@ -1,0 +1,22 @@
+{
+  "model": {
+    "min_macro_f1": 0.75,
+    "min_accuracy": 0.77,
+    "max_score_mae": 5.5,
+    "min_r2": 0.88,
+    "min_high_risk_recall": 0.55,
+    "forbid_features": ["risk_flags_count"],
+    "max_macro_f1_drop_vs_baseline": 0.03,
+    "max_mae_increase_vs_baseline": 0.5
+  },
+  "pipeline": {
+    "min_extraction_accuracy": 0.95,
+    "min_ocr_field_accuracy": 0.90,
+    "min_qa_correctness": 0.95,
+    "min_citation_accuracy": 0.95,
+    "max_hallucination_rate": 0.0,
+    "max_directive_rate": 0.0,
+    "min_advice_refusal_rate": 1.0,
+    "min_provided_testset_safe_rate": 1.0
+  }
+}

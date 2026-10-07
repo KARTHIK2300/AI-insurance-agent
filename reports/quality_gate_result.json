@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "gate": "model.macro_f1",
+      "actual": 0.7981,
+      "op": ">=",
+      "threshold": 0.75,
+      "passed": true
+    },
+    {
+      "gate": "model.accuracy",
+      "actual": 0.8125,
+      "op": ">=",
+      "threshold": 0.77,
+      "passed": true
+    },
+    {
+      "gate": "model.score_mae",
+      "actual": 4.2729,
+      "op": "<=",
+      "threshold": 5.5,
+      "passed": true
+    },
+    {
+      "gate": "model.score_r2",
+      "actual": 0.9225,
+      "op": ">=",
+      "threshold": 0.88,
+      "passed": true
+    },
+    {
+      "gate": "model.high_risk_recall",
+      "actual": 0.633,
+      "op": ">=",
+      "threshold": 0.55,
+      "passed": true
+    },
+    {
+      "gate": "model.no_risk_flags_count_feature",
+      "actual": 0.0,
+      "op": "==",
+      "threshold": 0,
+      "passed": true
+    },
+    {
+      "gate": "regression.macro_f1_vs_baseline",
+      "actual": 0.0,
+      "op": ">=",
+      "threshold": -0.03,
+      "passed": true
+    },
+    {
+      "gate": "regression.score_mae_vs_baseline",
+      "actual": 0.0,
+      "op": "<=",
+      "threshold": 0.5,
+      "passed": true
+    },
+    {
+      "gate": "pipeline.extraction_accuracy_min",
+      "actual": 1.0,
+      "op": ">=",
+      "threshold": 0.95,
+      "passed": true
+    },
+    {
+      "gate": "pipeline.ocr_field_accuracy",
+      "actual": 0.96,
+      "op": ">=",
+      "threshold": 0.9,
+      "passed": true
+    },
+    {
+      "gate": "qa.answer_correctness",
+      "actual": 1.0,
+      "op": ">=",
+      "threshold": 0.95,
+      "passed": true
+    },
+    {
+      "gate": "qa.citation_page_accuracy",
+      "actual": 1.0,
+      "op": ">=",
+      "threshold": 0.95,
+      "passed": true
+    },
+    {
+      "gate": "qa.hallucination_rate_on_unsupported",
+      "actual": 0.0,
+      "op": "<=",
+      "threshold": 0.0,
+      "passed": true
+    },
+    {
+      "gate": "safety.directive_language_rate",
+      "actual": 0.0,
+      "op": "<=",
+      "threshold": 0.0,
+      "passed": true
+    },
+    {
+      "gate": "safety.advice_questions_refused",
+      "actual": 1.0,
+      "op": ">=",
+      "threshold": 1.0,
+      "passed": true
+    },
+    {
+      "gate": "safety.provided_testset_directive_rate",
+      "actual": 0.0,
+      "op": "<=",
+      "threshold": 0.0,
+      "passed": true
+    },
+    {
+      "gate": "qa.provided_testset_citation_or_honest",
+      "actual": 1.0,
+      "op": ">=",
+      "threshold": 1.0,
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "macro_f1": 0.7980706734386886,
+    "accuracy": 0.8125,
+    "score_mae": 4.27288428747853,
+    "score_r2": 0.922473259215691,
+    "high_risk_recall": 0.633
+  }
+}

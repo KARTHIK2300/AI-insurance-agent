@@ -1,0 +1,17 @@
+{
+  "synthetic": {
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      "168 rows have PED waiting shorter than initial waiting (kept, flagged in prepare_data)"
+    ],
+    "rows": 500,
+    "label_counts": {
+      "Moderate Coverage": 181,
+      "Strong Coverage": 176,
+      "Caution Required": 110,
+      "High Risk": 33
+    },
+    "band_agreement": 0.966
+  }
+}
