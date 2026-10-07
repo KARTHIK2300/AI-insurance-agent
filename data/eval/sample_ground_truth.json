@@ -1,0 +1,12 @@
+{
+  "current": {"sum_insured": 500000, "annual_premium": 14200, "initial_waiting_months": 1, "ped_waiting_months": 36, "specific_waiting_months": 24,
+    "copayment_percentage": 10, "room_rent_limit": true, "icu_limit": true, "disease_sub_limit_count": 4, "exclusion_count": 14,
+    "restoration_benefit": false, "no_claim_bonus": true, "child_coverage": true, "maternity_coverage": false, "pre_hosp_days": 30, "post_hosp_days": 60,
+    "day_care": true, "ambulance": true, "domiciliary": true, "ayush": true, "opd": false, "cashless": true, "reimbursement": true, "grace_period_days": 30,
+    "policy_type": "Family Floater"},
+  "proposed": {"sum_insured": 1000000, "annual_premium": 19800, "initial_waiting_months": 1, "ped_waiting_months": 48, "specific_waiting_months": 36,
+    "copayment_percentage": 20, "room_rent_limit": false, "icu_limit": null, "disease_sub_limit_count": 2, "exclusion_count": 12,
+    "restoration_benefit": true, "no_claim_bonus": true, "child_coverage": true, "maternity_coverage": true, "maternity_waiting_months": 36, "pre_hosp_days": 60, "post_hosp_days": 90,
+    "day_care": true, "ambulance": true, "domiciliary": false, "ayush": true, "opd": true, "cashless": true, "reimbursement": true, "grace_period_days": 30,
+    "policy_type": "Family Floater"}
+}

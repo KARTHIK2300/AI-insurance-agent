@@ -1,0 +1,27 @@
+id,policy,question,expected_contains,expected_page,should_refuse
+S01,current,Is co-payment applicable in this policy?,10%,3,0
+S02,current,What is the waiting period for pre-existing diseases?,36 months,2,0
+S03,current,Is room rent capped?,1%,3,0
+S04,current,Is there any ICU limit?,2%,3,0
+S05,current,Does this policy have restoration benefit?,does not offer,2,0
+S06,current,Is maternity covered?,not covered,2,0
+S07,current,What is the grace period for renewal?,30 days,4,0
+S08,current,How much is the no claim bonus?,5%,2,0
+S09,current,How many days of pre-hospitalisation are covered?,30 days,2,0
+S10,current,Which documents are needed for reimbursement?,discharge summary,4,0
+S11,current,What is the sum insured?,"5,00,000",1,0
+S12,current,What is the capital of France?,,,1
+S13,current,Who is the CEO of the insurer and what is the salary?,,,1
+S14,current,Is hair transplant surgery covered?,,,1
+S15,proposed,Is co-payment applicable in this policy?,20%,3,0
+S16,proposed,What is the waiting period for pre-existing diseases?,48 months,2,0
+S17,proposed,Is room rent capped?,no capping,3,0
+S18,proposed,Is there any ICU limit?,not clearly found,,0
+S19,proposed,Does this policy have restoration benefit?,100%,2,0
+S20,proposed,Is maternity covered?,"50,000",2,0
+S21,proposed,Does the policy cover newborn baby?,day 1,2,0
+S22,proposed,Is there an OPD benefit?,"5,000",2,0
+S23,proposed,How much AYUSH treatment is covered?,25%,2,0
+S24,proposed,How long do I have to submit reimbursement documents?,30 days,4,0
+S25,proposed,Does the policy include domiciliary hospitalisation?,,,1
+S26,proposed,What is the sum insured?,"10,00,000",1,0

@@ -1,0 +1,38 @@
+{
+  "extraction_field_accuracy": {
+    "current": 1.0,
+    "proposed": 1.0
+  },
+  "extraction_fields_wrong": [],
+  "ocr": {
+    "pages_ocr": 4,
+    "field_accuracy": 0.96,
+    "seconds": 25.7,
+    "wrong": [
+      {
+        "field": "exclusion_count",
+        "expected": "14",
+        "extracted": "6"
+      }
+    ]
+  },
+  "policy_qa": {
+    "n_questions": 26,
+    "answer_correctness": 1.0,
+    "citation_page_accuracy": 1.0,
+    "refusal_accuracy_on_unsupported": 1.0,
+    "hallucination_rate_on_unsupported": 0.0,
+    "directive_language_rate": 0.0,
+    "median_latency_ms": 1.0
+  },
+  "policy_qa_failures": [],
+  "provided_testset_12_unique_questions_x2_policies": {
+    "citation_or_honest_not_found_rate": 1.0,
+    "advice_questions_refused_correctly": 1.0,
+    "directive_language_rate": 0.0
+  },
+  "processing_seconds_per_document": {
+    "current": 0.02,
+    "proposed": 0.01
+  }
+}

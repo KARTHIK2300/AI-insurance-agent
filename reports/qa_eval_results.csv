@@ -1,0 +1,96 @@
+id,policy,question,should_refuse,refused,answer_correct,citation_page_correct,has_citation,directive_language,latency_ms,answer
+S01,current,Is co-payment applicable in this policy?,False,False,True,True,True,False,3.1,"From the policy document:
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) Co-payment: 10% of every admissible claim is payable by the insured person.
+
+Please confirm with the insurer before relying on this."
+S02,current,What is the waiting period for pre-existing diseases?,False,False,True,True,True,False,1.3,"From the policy document:
+- (p.2, SECTION 3: WAITING PERIODS) Pre-existing diseases are covered only after a waiting period of 36 months of continuous coverage.
+
+Please confirm with the insurer before relying on this."
+S03,current,Is room rent capped?,False,False,True,True,True,False,1.6,"From the policy document:
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) Room rent is limited to 1% of the Sum Insured per day for a normal room.
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) If the room rent exceeds the limit, all other expenses are reduced in the same proportion (proportionate deduction).
+"
+S04,current,Is there any ICU limit?,False,False,True,True,True,False,1.2,"From the policy document:
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) ICU charges are limited to 2% of the Sum Insured per day.
+
+Please confirm with the insurer before relying on this."
+S05,current,Does this policy have restoration benefit?,False,False,True,True,True,False,0.9,"From the policy document:
+- (p.2, SECTION 2: WHAT IS COVERED) This policy does not offer a restoration or recharge benefit.
+
+Please confirm with the insurer before relying on this."
+S06,current,Is maternity covered?,False,False,True,True,True,False,1.2,"From the policy document:
+- (p.2, SECTION 3: WAITING PERIODS) Maternity expenses are not covered under this policy.
+- (p.2, SECTION 2: WHAT IS COVERED) 9. Dependent children can be added at inception or at renewal. Newborn babies are covered only from the next renewal after birth.
+
+Please confirm wi"
+S07,current,What is the grace period for renewal?,False,False,True,True,True,False,1.0,"From the policy document:
+- (p.4, SECTION 7: RENEWAL, PORTABILITY AND GRACE PERIOD) A grace period of 30 days is allowed for renewal payment.
+- (p.4, SECTION 7: RENEWAL, PORTABILITY AND GRACE PERIOD) The policy is renewable for life.
+
+Please confirm with the insurer before relying on this."
+S08,current,How much is the no claim bonus?,False,False,True,True,True,False,1.1,"From the policy document:
+- (p.2, SECTION 2: WHAT IS COVERED) 8. No Claim Bonus: a cumulative bonus of 5% of the base Sum Insured is added for each claim-free year, up to a maximum of 50%.
+- (p.4, SECTION 6: CLAIMS PROCEDURE) Reimbursement: submit the claim form, discharge summary, original bills an"
+S09,current,How many days of pre-hospitalisation are covered?,False,False,True,True,True,False,1.0,"From the policy document:
+- (p.2, SECTION 2: WHAT IS COVERED) 2. Pre-hospitalisation: medical expenses incurred up to 30 days before admission are covered.
+
+Please confirm with the insurer before relying on this."
+S10,current,Which documents are needed for reimbursement?,False,False,True,True,True,False,1.2,"From the policy document:
+- (p.4, SECTION 6: CLAIMS PROCEDURE) Reimbursement: submit the claim form, discharge summary, original bills and investigation reports within 15 days of discharge.
+- (p.2, SECTION 2: WHAT IS COVERED) 8. No Claim Bonus: a cumulative bonus of 5% of the base Sum Insured is add"
+S11,current,What is the sum insured?,False,False,True,True,True,False,1.0,"From the policy document:
+- (p.1, SECTION 1: POLICY SCHEDULE) Sum Insured: Rs. 5,00,000 per policy year on a floater basis.
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) ICU charges are limited to 2% of the Sum Insured per day.
+
+Please confirm with the insurer before relying on this."
+S12,current,What is the capital of France?,True,True,,,False,False,0.8,"Not clearly found in the uploaded policy document, so I won't guess. Please ask the insurer or advisor to confirm it in writing."
+S13,current,Who is the CEO of the insurer and what is the salary?,True,True,,,False,False,0.9,"Not clearly found in the uploaded policy document, so I won't guess. Please ask the insurer or advisor to confirm it in writing."
+S14,current,Is hair transplant surgery covered?,True,True,,,False,False,0.8,"Not clearly found in the uploaded policy document, so I won't guess. Please ask the insurer or advisor to confirm it in writing."
+S15,proposed,Is co-payment applicable in this policy?,False,False,True,True,True,False,0.9,"From the policy document:
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) Co-payment: no co-payment applies for insured persons aged up to 60 years.
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) A co-payment of 20% applies for insured persons aged 61 years and above.
+
+Please confirm with the insurer before re"
+S16,proposed,What is the waiting period for pre-existing diseases?,False,False,True,True,True,False,0.8,"From the policy document:
+- (p.2, SECTION 3: WAITING PERIODS) Pre-existing diseases are covered after a waiting period of 48 months of continuous coverage.
+
+Please confirm with the insurer before relying on this."
+S17,proposed,Is room rent capped?,False,False,True,True,True,False,1.2,"From the policy document:
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) Room rent: any room category up to a single private room is covered.
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) There is no capping on room rent for this Sum Insured.
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) Sub-limit for joint repl"
+S18,proposed,Is there any ICU limit?,False,True,True,,False,False,1.1,"Not clearly found in the uploaded policy document, so I won't guess. Please ask the insurer or advisor to confirm it in writing."
+S19,proposed,Does this policy have restoration benefit?,False,False,True,True,True,False,0.9,"From the policy document:
+- (p.2, SECTION 2: WHAT IS COVERED) 7. Restore Benefit: 100% of the base Sum Insured is restored once per policy year for an unrelated illness.
+
+Please confirm with the insurer before relying on this."
+S20,proposed,Is maternity covered?,False,False,True,True,True,False,1.0,"From the policy document:
+- (p.2, SECTION 2: WHAT IS COVERED) 9. Maternity: maternity expenses are covered up to Rs. 50,000 per delivery after a waiting period of 36 months.
+- (p.2, SECTION 2: WHAT IS COVERED) 10. Newborn baby is covered from day 1 up to 90 days within the maternity limit.
+
+Please c"
+S21,proposed,Does the policy cover newborn baby?,False,False,True,True,True,False,1.3,"From the policy document:
+- (p.2, SECTION 2: WHAT IS COVERED) 10. Newborn baby is covered from day 1 up to 90 days within the maternity limit.
+- (p.1, SECTION 1: POLICY SCHEDULE) Dependent children are covered from day 1 up to 23 years.
+
+Please confirm with the insurer before relying on this."
+S22,proposed,Is there an OPD benefit?,False,False,True,True,True,False,0.8,"From the policy document:
+- (p.2, SECTION 2: WHAT IS COVERED) 11. OPD consultation benefit up to Rs. 5,000 per year is available as an optional add-on.
+
+Please confirm with the insurer before relying on this."
+S23,proposed,How much AYUSH treatment is covered?,False,False,True,True,True,False,0.7,"From the policy document:
+- (p.2, SECTION 2: WHAT IS COVERED) 6. AYUSH treatment is covered up to 25% of the Sum Insured.
+
+Please confirm with the insurer before relying on this."
+S24,proposed,How long do I have to submit reimbursement documents?,False,False,True,True,True,False,1.0,"From the policy document:
+- (p.4, SECTION 6: CLAIMS PROCEDURE) Reimbursement: submit the claim form, discharge summary and original bills within 30 days of discharge.
+- (p.2, SECTION 2: WHAT IS COVERED) 8. No Claim Bonus: 10% of the base Sum Insured is added for each claim-free year, up to 100%.
+
+Pl"
+S25,proposed,Does the policy include domiciliary hospitalisation?,True,True,,,False,False,0.9,"Not clearly found in the uploaded policy document, so I won't guess. Please ask the insurer or advisor to confirm it in writing."
+S26,proposed,What is the sum insured?,False,False,True,True,True,False,0.9,"From the policy document:
+- (p.1, SECTION 1: POLICY SCHEDULE) Sum Insured: Rs. 10,00,000 per policy year on a floater basis.
+- (p.3, SECTION 4: CO-PAYMENT AND LIMITS) There is no capping on room rent for this Sum Insured.
+
+Please confirm with the insurer before relying on this."
