@@ -1,0 +1,3 @@
+-r requirements.txt
+boto3>=1.34              # optional: read secrets from AWS Secrets Manager (COVERWISE_AWS_SECRET_ID)
+huggingface_hub>=0.24    # optional: scripts/deploy_hf_space.py

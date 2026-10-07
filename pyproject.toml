@@ -1,0 +1,19 @@
+[project]
+name = "coverwise-ai"
+version = "1.0.0"
+description = "Coverage Insight and Risk Intelligence System - insurance policy decoder and risk explainer"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 150            # project choice: PEP 8 style with a wider limit for table-heavy report/summary code
+target-version = "py312"
+extend-exclude = ["data", "models", "reports"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]  # pycodestyle (PEP 8), pyflakes, import order
+per-file-ignores = { "scripts/*" = ["E402"], "app/*" = ["E402"], "tests/*" = ["E402"], "*.ipynb" = ["E402", "E401", "I001"] }
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

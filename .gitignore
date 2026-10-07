@@ -1,0 +1,15 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+data/raw/acko*.csv
+data/private/
+*.log
+reports/pg-*.png
+.ruff_cache/
+data/real_policies/*
+!data/real_policies/README.md
+data/labelled/*.jsonl
+reports/junit.xml
+reports/real_policy_eval.*
