@@ -1,0 +1,7 @@
+Extract the following fields from the policy text below. Return a JSON object whose keys are the field names and whose values are objects of the form {{"value": <value>, "quote": "<exact supporting words>"}}.
+
+Fields and types:
+{schema}
+
+Policy text (personal identifiers have been masked):
+{context}
