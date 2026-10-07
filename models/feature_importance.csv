@@ -1,0 +1,23 @@
+,importance
+copayment_percentage,1.8745627113750736
+restoration_benefit_present,1.6409575372079075
+pre_existing_disease_waiting_period_months,1.4356364957782692
+no_claim_bonus_present,1.1669560459871602
+ambiguous_clause_count,1.1444444165929408
+room_rent_limit_present,0.8627993893003734
+disease_sub_limit_count,0.7241545119310941
+icu_limit_present,0.7229785512782583
+waiting_period_months,0.6376246605670428
+exclusion_count,0.5800653501988222
+claim_process_clarity_score,0.3886011679826492
+policy_type_Top-up Health,0.3722802873138818
+policy_type_Family Floater,0.36685772745397527
+policy_type_Group Health,0.2859801966721758
+policy_type_Critical Illness,0.2542394077584656
+sum_insured,0.24275526238042144
+maternity_coverage_present,0.20105629654711138
+policy_type_Senior Citizen,0.20086991543655192
+annual_premium,0.13847927541663904
+premium_to_coverage_ratio,0.11401627648756502
+policy_type_Individual Health,0.11035252622915345
+child_coverage_present,0.09965960099543514

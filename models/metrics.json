@@ -1,0 +1,149 @@
+{
+  "n_rows": 480,
+  "n_real_rows": 0,
+  "label_counts": {
+    "Moderate Coverage": 180,
+    "Strong Coverage": 165,
+    "Caution Required": 105,
+    "High Risk": 30
+  },
+  "cv": "5-fold stratified, out-of-fold",
+  "classifiers": {
+    "Rule-based baseline": {
+      "accuracy": 0.8166666666666667,
+      "macro_f1": 0.7930413522409192,
+      "score_mae": 4.521875,
+      "score_r2": 0.9134525213788177
+    },
+    "Logistic Regression | core (no risk_flags_count)": {
+      "accuracy": 0.7625,
+      "macro_f1": 0.7304524006002195
+    },
+    "Decision Tree | core (no risk_flags_count)": {
+      "accuracy": 0.47291666666666665,
+      "macro_f1": 0.4240170807987078
+    },
+    "Random Forest | core (no risk_flags_count)": {
+      "accuracy": 0.625,
+      "macro_f1": 0.47344078313087323
+    },
+    "Gradient Boosting | core (no risk_flags_count)": {
+      "accuracy": 0.65,
+      "macro_f1": 0.5502939525700535
+    },
+    "Logistic Regression | with risk_flags_count": {
+      "accuracy": 0.8395833333333333,
+      "macro_f1": 0.8056573675428765
+    },
+    "Decision Tree | with risk_flags_count": {
+      "accuracy": 0.7645833333333333,
+      "macro_f1": 0.7017796375981998
+    },
+    "Random Forest | with risk_flags_count": {
+      "accuracy": 0.7895833333333333,
+      "macro_f1": 0.6360976085519829
+    },
+    "Gradient Boosting | with risk_flags_count": {
+      "accuracy": 0.80625,
+      "macro_f1": 0.7273416277343511
+    },
+    "Ridge regressor -> score bands | core": {
+      "accuracy": 0.8041666666666667,
+      "macro_f1": 0.7717511902133314
+    },
+    "Gradient Boosting regressor -> score bands | core": {
+      "accuracy": 0.8125,
+      "macro_f1": 0.7980706734386886
+    }
+  },
+  "second_opinion_classifier": "Logistic Regression | core (no risk_flags_count)",
+  "production_method": "Gradient Boosting regressor -> score bands",
+  "per_class_production": {
+    "High Risk": {
+      "precision": 0.905,
+      "recall": 0.633,
+      "f1-score": 0.745,
+      "support": 30.0
+    },
+    "Caution Required": {
+      "precision": 0.814,
+      "recall": 0.79,
+      "f1-score": 0.802,
+      "support": 105.0
+    },
+    "Moderate Coverage": {
+      "precision": 0.756,
+      "recall": 0.844,
+      "f1-score": 0.798,
+      "support": 180.0
+    },
+    "Strong Coverage": {
+      "precision": 0.872,
+      "recall": 0.824,
+      "f1-score": 0.847,
+      "support": 165.0
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "High Risk",
+      "Caution Required",
+      "Moderate Coverage",
+      "Strong Coverage"
+    ],
+    "matrix": [
+      [
+        19,
+        11,
+        0,
+        0
+      ],
+      [
+        2,
+        83,
+        20,
+        0
+      ],
+      [
+        0,
+        8,
+        152,
+        20
+      ],
+      [
+        0,
+        0,
+        29,
+        136
+      ]
+    ]
+  },
+  "regressors": {
+    "Ridge": {
+      "mae": 4.967620089631479,
+      "r2": 0.8977111536980988,
+      "label_accuracy_via_bands": 0.8041666666666667,
+      "label_macro_f1_via_bands": 0.7717511902133314
+    },
+    "Gradient Boosting": {
+      "mae": 4.27288428747853,
+      "r2": 0.922473259215691,
+      "label_accuracy_via_bands": 0.8125,
+      "label_macro_f1_via_bands": 0.7980706734386886
+    }
+  },
+  "selected_regressor": "Gradient Boosting",
+  "macro_f1_on_consistent_waiting_rows": 0.808,
+  "top_features": {
+    "copayment_percentage": 1.875,
+    "restoration_benefit_present": 1.641,
+    "pre_existing_disease_waiting_period_months": 1.436,
+    "no_claim_bonus_present": 1.167,
+    "ambiguous_clause_count": 1.144,
+    "room_rent_limit_present": 0.863,
+    "disease_sub_limit_count": 0.724,
+    "icu_limit_present": 0.723,
+    "waiting_period_months": 0.638,
+    "exclusion_count": 0.58
+  }
+}
